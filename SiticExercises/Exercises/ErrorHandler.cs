@@ -43,6 +43,27 @@ namespace Exercises
             }
             #endregion
         }
+
+        public class CustomAppException : Exception
+        {
+            private eErrorType ErrorResponseEx {get; set;} = eErrorType.Ninguno;
+
+            public CustomAppException() : base() { }
+            public CustomAppException(string message, eErrorType type) : base(message) 
+            {
+                ErrorResponseEx = type;
+            }
+        }
+
+        public enum eErrorType
+        {
+            Ninguno = 0,
+            Validacion,
+            Conexion,
+            InformaciónDuplicada,
+            Autenticación,
+            Desconocido = 99
+        }
         #endregion
 
         private static List<User> GetUsers()
@@ -61,7 +82,7 @@ namespace Exercises
             const string username = "Tamaris";
             const string password = "admin";
 
-
+            RegisterUserWithValidations(username, password, "catorce");
 
             Console.ReadKey();
         }
@@ -80,9 +101,51 @@ namespace Exercises
             if (!IsExistingUser(username))
                 InsertUser(new(username, password));
 
+            Console.WriteLine("Confirmo los cambios");
             return 0;
+            
         }
 
+        public static void RegisterUserWithValidations(string username, string password, string ageInput)
+        {
+            Console.WriteLine("Iniciamos proceso de registro de cientes");
+
+            try
+            {
+                Console.WriteLine("Abrimos transacción");
+                int age = ValidateAge(ageInput);
+                Console.WriteLine("Ejecutamos acciones en la base de datos");
+
+                if (!IsExistingUser(username))
+                    InsertUser(new(username, password));
+
+                Console.WriteLine("Confirmo los cambios");
+
+            }
+            catch (CustomAppException ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Rollback");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Rollback");
+            }
+
+        }
+
+        public static int ValidateAge(string ageInput)
+        {
+            if (!int.TryParse(ageInput, out int age))
+                throw new CustomAppException("La edad está en formato incorrecto", eErrorType.Validacion);
+
+            if(age < MIN_AGE || age > MAX_AGE)
+                throw new CustomAppException($"La edad debe estar entre los {MIN_AGE} y los {MAX_AGE} años", eErrorType.Validacion);
+
+
+
+            return age;
+        }
         public static bool IsExistingUser(string username)
         {
             return UserList != null && UserList.Any(user => user.Username == username);
