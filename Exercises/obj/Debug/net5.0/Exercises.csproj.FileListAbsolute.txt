@@ -1,0 +1,16 @@
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\bin\Debug\net5.0\Exercises.exe
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\bin\Debug\net5.0\Exercises.deps.json
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\bin\Debug\net5.0\Exercises.runtimeconfig.json
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\bin\Debug\net5.0\Exercises.runtimeconfig.dev.json
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\bin\Debug\net5.0\Exercises.dll
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\bin\Debug\net5.0\ref\Exercises.dll
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\bin\Debug\net5.0\Exercises.pdb
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\obj\Debug\net5.0\Exercises.csproj.AssemblyReference.cache
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\obj\Debug\net5.0\Exercises.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\obj\Debug\net5.0\Exercises.AssemblyInfoInputs.cache
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\obj\Debug\net5.0\Exercises.AssemblyInfo.cs
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\obj\Debug\net5.0\Exercises.csproj.CoreCompileInputs.cache
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\obj\Debug\net5.0\Exercises.dll
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\obj\Debug\net5.0\ref\Exercises.dll
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\obj\Debug\net5.0\Exercises.pdb
+C:\Users\Iris Saucedo Delgado\GitHub\SiticExercises\Exercises\obj\Debug\net5.0\Exercises.genruntimeconfig.cache

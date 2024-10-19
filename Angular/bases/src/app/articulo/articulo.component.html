@@ -1,0 +1,27 @@
+<h1>{{nombre | uppercase}}</h1>
+
+<dl>
+    <td>Nombre</td>
+    <dd>{{nombre}}</dd>
+
+    <td>Precio</td>
+    <dd>{{precio | number:'.2' }}</dd>
+
+    <td>Método</td>
+    <dd>{{getArticuloInfo()}}</dd>
+
+    <button *ngIf="!precioChanged"
+        (click)="cambiarPrecio()">
+        Cambiar precio
+    </button>
+
+    <button *ngIf="!nombreChanged"
+        (click)="cambiarNombre()">
+        Cambiar nombre
+    </button>
+    
+    <button *ngIf="precioChanged || nombreChanged"
+    (click)="resetForm()">
+        Reset
+    </button>
+</dl>
