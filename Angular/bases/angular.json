@@ -20,10 +20,15 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob":"**/*.svg",
+                "input": "node_modules/@material-design-icons/svg",
+                "output": "assets/ing/icons/material-design-icons/"
+              }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
