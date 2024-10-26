@@ -7,16 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticuloComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
   nombre: string = 'Batería';
   precio: number = 1200;
 
   nombreChanged: boolean = false;
   precioChanged: boolean = false;
+  
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
   getArticuloInfo(): string {
     return `${this.nombre} - ${this.precio}`

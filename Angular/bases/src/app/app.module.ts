@@ -1,23 +1,29 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// MODULES CUSTOM
 import { CounterModule } from './counter/counter.module';
-import { ArticuloComponent } from './articulo/articulo.component';
+import { ArticuloModule } from './articulo/articulo.module';
+import { ListModule } from './articulo/list/list.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ArticuloComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
 
-    //Componentes
+    // COMPONENTES CUSTOM
     CounterModule,
-    ArticuloComponent
+    ArticuloModule,
+    ListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

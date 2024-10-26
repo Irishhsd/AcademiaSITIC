@@ -8,22 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class CounterComponent implements OnInit {
 
   contador: number = 10;
-
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  incrementar(value:number) {
+  incrementar(value: number) {
     this.contador += value;
   }
 
-  decrementar(value:number){
+  decrementar(value: number) {
     this.contador -= value;
   }
 
-  reset(){
-    this.contador=10;
+  reset() {
+    this.contador = 10;
   }
 
 }

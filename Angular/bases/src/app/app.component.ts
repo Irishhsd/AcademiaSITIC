@@ -9,6 +9,7 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 })
 export class AppComponent {
   title = 'Mi primera App en Angular';
+
   constructor(
     private readonly matIconRegistry: MatIconRegistry,
     private readonly domSanitizer: DomSanitizer) { 
@@ -21,10 +22,9 @@ export class AppComponent {
             case 'mat':
               return this.domSanitizer.bypassSecurityTrustResourceUrl(
                 `assets/img/icons/material-design-icons/two-tone/${name}.svg`
-              );}        
-              return null;
+              );
+          }        
         }
       );
-   }
-
+    }
 }

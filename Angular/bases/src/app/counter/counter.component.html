@@ -1,5 +1,21 @@
-<h3>contador: {{contador}}</h3>
+<h3>Contador: {{ contador }}</h3>
+<button 
+    matTooltip="Restar"
+    mat-raised-button color="primary" class="mr-2"
+    (click)="decrementar(1)">
+    -
+</button>
 
-<button (click)="decrementar(1)">-</button>
-<button (click)="incrementar(1)">+</button>
-<button (click)="reset()">Reset</button>
+<button 
+    matTooltip="Sumar"
+    mat-raised-button color="primary" class="mr-2"
+    (click)="incrementar(1)">
+    +
+</button>
+
+<button 
+    matTooltip="Resetear valores"
+    mat-raised-button color="accent" class="mr-2"
+    (click)="reset()">
+    Reset
+</button>

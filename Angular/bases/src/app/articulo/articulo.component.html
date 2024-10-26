@@ -1,27 +1,29 @@
-<h1>{{nombre | uppercase}}</h1>
-
+<h1>{{ nombre | uppercase }}</h1>
 <dl>
-    <td>Nombre</td>
-    <dd>{{nombre}}</dd>
+  <td>Nombre</td>
+  <dd>{{ nombre }}</dd>
 
-    <td>Precio</td>
-    <dd>{{precio | number:'.2' }}</dd>
+  <td>Precio</td>
+  <dd>{{ precio | number:'.2' }}</dd>
 
-    <td>Método</td>
-    <dd>{{getArticuloInfo()}}</dd>
+  <td>Método</td>
+  <dd>{{ getArticuloInfo() }}</dd>
 
-    <button *ngIf="!precioChanged"
-        (click)="cambiarPrecio()">
-        Cambiar precio
-    </button>
+  <button *ngIf="!precioChanged"
+    mat-raised-button color="primary" class="mr-2"
+    (click)="cambiarPrecio()">
+    Cambiar Precio
+  </button>
 
-    <button *ngIf="!nombreChanged"
-        (click)="cambiarNombre()">
-        Cambiar nombre
-    </button>
-    
-    <button *ngIf="precioChanged || nombreChanged"
+  <button *ngIf="!nombreChanged"
+    mat-raised-button color="primary" class="mr-2"
+    (click)="cambiarNombre()">
+    Cambiar Nombre
+  </button>
+
+  <button *ngIf="precioChanged || nombreChanged"
+    mat-raised-button color="accent"
     (click)="resetForm()">
-        Reset
-    </button>
+    Reset
+  </button>
 </dl>
